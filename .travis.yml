@@ -19,7 +19,7 @@ before_script:
 
 script:
   - docker build --tag yanqd0/jnlp-dind-slave .
-  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker version'
+  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker --version'
   - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker-compose version'
   - docker-compose config
 
