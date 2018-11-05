@@ -1,0 +1,33 @@
+# vim: set shiftwidth=2 tabstop=2 softtabstop=-1 expandtab:
+
+sudo: required
+
+language: python
+
+python:
+  - "3.6"
+
+services:
+  - docker
+
+install:
+  - pip install docker-compose
+
+before_script:
+  - docker version
+  - docker-compose version
+
+script:
+  - docker build --tag yanqd0/jnlp-dind-slave .
+  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker version'
+  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker-compose version'
+  - docker-compose config
+
+deploy:
+  provider: releases
+  api_key:
+    secure: q7RKS6j/m+x3XKfqwhwsVDN2RzUH/+hbDGG5uUn2gLxHMIByt6rJgmDvO8c5lVxfSImW4qJVw7EEgJBLw/Rpo+CQQPBg/DMKwCB9GPx56wfg/AoFTHjEMjZth2WaYjhXLxsm9sRiJb5z3gN33kP2SqskmOE9adiiJeNbyrTqRuhWrNhkh8tolNsBpO3MXVK37HpUoVEvgUX3QOlROSL8QLD7Ktm5Bm+cjfBS+kyPPA6ubFOgoC2zr/ssYx0yskTaZ1pAL2lQ2yREo+J+Vq//nE5ZZryZDqTQ+fe3Z8AT/XIHGFhUaeHKnqI10emsMCW3Agb63pOCUDp4CSJeJNu0JsJ6D4Ps4jpeob4anrAcm+cVVrwqcpQIKzJskH6vaLcrfNmCyqOI3FZwdTnXKCZYHRMiK0P8wdirpUP9eRAGIILxp80O1uZ++nyh7KLjBl0JLfGnxdWcBm4y12dkL2tEIPsVcBCzL1us0gEaJQtYEMyC86b52uxGjUDaHJfxgyqiyzMZu/FhdpDZKJHXBIPQKWb7RHkXL65Lk+MXboL+7DLwkFXJ1XrL0Aj3m0IzNmkcW+qKHtZjqJJ5+pe0SLOVlDC2sldGg6w/2DOlWQxmyeZR9IAhRNDk5QmgqGqmeR+qu+LnRVg18qjuXzuDeC45WLbxdlCeygPKL5NbXOteubU=
+  file: Dockerfile
+  on:
+    repo: yanqd0/jnlp-dind-slave
+    tags: true
