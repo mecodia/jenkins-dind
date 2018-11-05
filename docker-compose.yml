@@ -1,11 +1,12 @@
-version: '2.3'
+version: '3'
+
 services:
   jnlp:
-    build: .
+    image: yanqd0/jnlp-dind-slave
     environment:
-    - DOCKER_HOST=dind
+      - DOCKER_HOST=dind
     depends_on:
-    - dind
+      - dind
 
   dind:
     image: docker:dind
