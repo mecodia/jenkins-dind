@@ -8,20 +8,27 @@ You can either connect via the Docker socket like this:
 ```sh
 docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
+    --rm \
+    --entrypoint bash \
     yanqd0/jnlp-dind-slave \
-    docker ps
+    -c 'docker version'
 ```
 
 Or better, connect to some external Docker deamon via TCP:
 
 ```sh
+docker run --rm --name dind -d --privileged --net host docker:dind
 docker run \
-    -e DOCKER_HOST=dind \
+    --rm \
+    -e DOCKER_HOST=localhost \
+    --net host \
+    --entrypoint bash \
     yanqd0/jnlp-dind-slave \
     docker ps
 ```
 
-See the [docker-compose.yml](docker-compose.yml) file for reference.
+There is a reference file [docker-compose.yml](docker-compose.yml),
+which is not working directly.
 
 ## Version
 
