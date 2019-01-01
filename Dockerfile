@@ -1,7 +1,7 @@
 FROM jenkins/jnlp-slave:3.27-1
 
-ARG DOCKER_VERSION=17.06.2~ce-0~debian
-ARG DC_VERSION=1.18.0
+ARG DOCKER_VERSION=18.06.1~ce~3-0~debian
+ARG DC_VERSION=1.23.2
 
 USER root
 
