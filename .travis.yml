@@ -2,25 +2,19 @@
 
 sudo: required
 
-language: python
-
-python:
-  - "3.6"
+language: generic
 
 services:
   - docker
-
-install:
-  - pip install docker-compose
 
 before_script:
   - docker version
   - docker-compose version
 
 script:
-  - docker build --tag yanqd0/jnlp-dind-slave .
-  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker --version'
-  - docker run --rm -it --entrypoint bash yanqd0/jnlp-dind-slave -c 'docker-compose version'
+  - docker build --tag jnlp-dind-slave .
+  - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock --entrypoint bash jnlp-dind-slave -c 'docker --version'
+  - docker run --rm --entrypoint bash jnlp-dind-slave -c 'docker-compose version'
   - docker-compose config
 
 deploy:
