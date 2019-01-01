@@ -1,7 +1,18 @@
 # Jenkins JNLP Slave with Docker in Docker
 
-A JNLP Slave Docker image with docker and docker-compose installed. We use this with the Jenkins ECS plugin to
-automatically provision Jenkins slaves which then can use Docker to run their jobs.
+A JNLP Slave Docker image with docker and docker-compose installed.
+
+## Install
+
+[![Docker Build Status](https://img.shields.io/docker/build/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/builds/)
+[![Docker Stars](https://img.shields.io/docker/stars/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/)
+
+```sh
+docker pull yanqd0/hugo
+```
+
+## Usage
 
 You can either connect via the Docker socket like this:
 
