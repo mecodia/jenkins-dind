@@ -2,7 +2,7 @@ FROM jenkins/jnlp-slave:3.27-1
 
 LABEL maintainer="yanqd0@outlook.com"
 
-ARG DOCKER_VERSION=18.06.1~ce~3-0~debian
+ARG DOCKER_VERSION=5:18.09.0~3-0~debian-stretch
 ARG DC_VERSION=1.23.2
 
 USER root
@@ -18,7 +18,7 @@ RUN apt-get update \
     && apt-key fingerprint 0EBFCD88 \
     && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" \
     && apt-get update \
-    && apt-get install -qq -y --no-install-recommends docker-ce=${DOCKER_VERSION} \
+    && apt-get install -qq -y --no-install-recommends "docker-ce=${DOCKER_VERSION}" \
     && curl -fsSL https://github.com/docker/compose/releases/download/${DC_VERSION}/docker-compose-`uname -s`-`uname -m` \
         -o /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose \

@@ -64,6 +64,7 @@ It is welcome to remind me to update by [issues].
 This repository is forked from [ninech/jnlp-slave-with-docker], which is not maintained.
 
 > Copyright (c) 2018~2019 Yan QiDong
+>
 > Copyright (c) 2018 nine
 
 [ninech/jnlp-slave-with-docker]:https://github.com/ninech/jnlp-slave-with-docker
