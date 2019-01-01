@@ -4,6 +4,7 @@ A JNLP Slave Docker image with docker and docker-compose installed.
 
 ## Install
 
+[![Build Status](https://travis-ci.org/yanqd0/jnlp-dind-slave.svg?branch=master)](https://travis-ci.org/yanqd0/jnlp-dind-slave)
 [![Docker Build Status](https://img.shields.io/docker/build/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/builds/)
 [![Docker Stars](https://img.shields.io/docker/stars/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/)
