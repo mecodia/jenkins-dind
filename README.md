@@ -36,7 +36,7 @@ docker run \
     --net host \
     --entrypoint bash \
     yanqd0/jnlp-dind-slave \
-    docker ps
+    -c 'docker version'
 ```
 
 There is a reference file [docker-compose.yml](docker-compose.yml),
