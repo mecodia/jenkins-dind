@@ -47,10 +47,10 @@ which is not working directly.
 | ----          | ------: |
 | Debian        | Stretch |
 | OpenJDK       | 8       |
-| Git           | 2.18.0  |
+| Git           | 2.11.0  |
 | Jenkins slave | 3.27    |
-| Docker        | 17.06.2 |
-| docker-cmpose | 1.18.0  |
+| Docker        | 18.09.0 |
+| docker-cmpose | 1.23.2  |
 
 It is welcome to remind me to update by [issues].
 
