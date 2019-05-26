@@ -10,7 +10,7 @@ A JNLP Slave Docker image with docker and docker-compose installed.
 [![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/jnlp-dind-slave.svg)](https://hub.docker.com/r/yanqd0/jnlp-dind-slave/)
 
 ```sh
-docker pull yanqd0/hugo
+docker pull yanqd0/jnlp-dind-slave
 ```
 
 ## Usage
