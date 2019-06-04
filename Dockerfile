@@ -2,8 +2,8 @@ FROM jenkins/jnlp-slave:3.27-1
 
 LABEL maintainer="yanqd0@outlook.com"
 
-ARG DOCKER_VERSION=5:18.09.0~3-0~debian-stretch
-ARG DC_VERSION=1.23.2
+ARG DOCKER_VERSION=5:18.09.6~3-0~debian-stretch
+ARG DC_VERSION=1.24.0
 
 USER root
 

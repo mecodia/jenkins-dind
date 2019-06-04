@@ -50,8 +50,8 @@ which is not working directly.
 | OpenJDK       | 8       |
 | Git           | 2.11.0  |
 | Jenkins slave | 3.27    |
-| Docker        | 18.09.0 |
-| docker-cmpose | 1.23.2  |
+| Docker        | 18.09.6 |
+| docker-cmpose | 1.24.0  |
 
 It is welcome to remind me to update by [issues].
 
